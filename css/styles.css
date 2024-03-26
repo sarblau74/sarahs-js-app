@@ -1,3 +1,6 @@
 body {
     background-color: rgb(190, 230, 226);
 }
+.pokemon-button {
+    color: pink;
+}
