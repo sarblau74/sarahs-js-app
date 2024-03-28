@@ -6,4 +6,7 @@ body {
     border: 2px solid gray;
     margin: 2px;
     color:black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
