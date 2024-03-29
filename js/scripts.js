@@ -35,9 +35,10 @@ let pokemonRepository = (function () {
     function add(pokemon) {
         pokemonList.push(pokemon);
     }           
-    
-    function getAll() {
-        return pokemonList;
+    function getAll (){
+        pokemonList.forEach(function(pokemon){
+            addListItem(pokemon);
+        })
     }
 
     function addListItem(pokemon) {
@@ -54,7 +55,6 @@ let pokemonRepository = (function () {
 
         addEventListenerToButton(button, pokemon);
     }
-
     function addEventListenerToButton(button, pokemon) {
         button.addEventListener('click', function () {
             showDetails(pokemon);
@@ -64,11 +64,12 @@ let pokemonRepository = (function () {
             console.log(pokemon);
         }
     } 
+    getAll();
 
     return {
         add,
         getAll,
-        addListItem
+        addListItem,
     };
 })(); 
 
