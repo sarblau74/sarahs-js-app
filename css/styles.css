@@ -1,21 +1,25 @@
 body {
     background-color: rgb(247, 255, 130);
 }
-.pokemon-box{
+/*.pokemon-box{
+
+}*/
+.pokemon-list {
     border:2px solid #333;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .pokemon-button {
     background-color: rgb(250, 94, 94);
     border: 2px solid #333;
+    padding: 10px;
     margin: 10px;
     color: #4f54f8; 
     text-shadow: -1.5px -1.5px 0 #333;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer; 
     font-size: 20px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    display:-ms-grid;
 }
 .pokemon-button:hover{
     background-color: beige;
@@ -27,4 +31,5 @@ h1 {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: #4f54f8; 
     text-shadow: -1.5px -1.5px 0 #333;
+    text-align: center;
 }
