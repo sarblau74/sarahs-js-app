@@ -23,6 +23,7 @@ body {
 }
 .pokemon-button:hover{
     background-color: beige;
+    transform:scale(1.1);
 }
 ul {
     list-style-type: none;
