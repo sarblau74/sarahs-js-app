@@ -7,7 +7,7 @@ body {
 .pokemon-list {
     border:2px solid #333;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .pokemon-button {
     background-color: rgb(250, 94, 94);
