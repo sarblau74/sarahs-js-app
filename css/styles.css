@@ -1,69 +1,34 @@
+/* Bootstrap overrides */
 body {
-    background-color: rgb(247, 255, 130);
+  background-color: rgb(247, 255, 130);
 }
-/*.pokemon-box{
 
-}*/
-.pokemon-list {
-    border:2px solid #333;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
+/* Button styles */
 .pokemon-button {
-    background-color: rgb(250, 94, 94);
-    border: 2px solid #333;
-    padding: 10px;
-    margin: 10px;
-    color: #4f54f8; 
-    text-shadow: -1.5px -1.5px 0 #333;
-    border-radius: 5px;
-    cursor: pointer; 
-    font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(250, 94, 94);
+  border: 2px solid #333;
+  padding: 10px;
+  margin: 10px;
+  color: #4f54f8; 
+  text-shadow: -1.5px -1.5px 0 #333;
+  border-radius: 5px;
+  cursor: pointer; 
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.pokemon-button:hover{
-    background-color: beige;
-    transform:scale(1.1);
-}
-ul {
-    list-style-type: none;
-}
-h1 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #4f54f8; 
-    text-shadow: -1.5px -1.5px 0 #333;
-    text-align: center;
-}
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scrolling if needed */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
 
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
+.pokemon-button:hover {
+  background-color: beige;
+  transform: scale(1.1);
+}
 
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
+/* List styles */
+.pokemon-list {
+  border: 2px solid #333;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
 
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+/* Modal styles (Bootstrap will handle this) */
+
+/* Close button styles (Bootstrap will handle this) */
