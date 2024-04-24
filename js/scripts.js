@@ -20,15 +20,12 @@ let pokemonRepository = (function () {
       let button = document.createElement('button');
 
       button.innerText = pokemon.name;
-      button.classList.add('btn', 'btn-primary', 'list-group-item', 'pokemon-button'); // Adding Bootstrap button classes
+      button.classList.add('btn', 'btn-primary', 'list-group-item', 'pokemon-button');
 
-      listItem.classList.add('list-group-item'); // Adding Bootstrap list-group-item class
+      listItem.classList.add('list-group-item');
 
       listItem.appendChild(button);
       pokemonListElement.appendChild(listItem);
-
-      button.setAttribute('data-toggle', 'modal'); // Adding Bootstrap modal toggle attribute
-      button.setAttribute('data-target', '#pokemonModal'); // Setting target modal id
 
       button.addEventListener('click', function () {
           showDetails(pokemon);
@@ -66,6 +63,7 @@ let pokemonRepository = (function () {
               item.imageUrl = details.sprites.front_default;
               item.height = details.height;
               item.types = details.types;
+              return item; // Return the item with details
           })
           .catch(function (e) {
               console.error(e);
@@ -73,8 +71,31 @@ let pokemonRepository = (function () {
   }
 
   function showDetails(item) {
-      loadDetails(item).then(function () {
-          // Bootstrap modal will handle showing details
+      loadDetails(item).then(function (itemWithDetails) {
+          // Display details in modal
+          const modal = document.getElementById('pokemonModal');
+          const modalName = document.getElementById('pokemonName');
+          const modalHeight = document.getElementById('pokemonHeight');
+          const modalImage = document.getElementById('pokemonImage');
+
+          modalName.innerText = itemWithDetails.name;
+          modalHeight.innerText = itemWithDetails.height + ' decimetres';
+          modalImage.src = itemWithDetails.imageUrl;
+
+          modal.style.display = 'block';
+
+          // Close modal when close button clicked
+          const closeButton = document.getElementsByClassName('close')[0];
+          closeButton.addEventListener('click', function () {
+              modal.style.display = 'none';
+          });
+
+          // Close modal when clicking outside of modal
+          window.addEventListener('click', function (event) {
+              if (event.target == modal) {
+                  modal.style.display = 'none';
+              }
+          });
       });
   }
 
