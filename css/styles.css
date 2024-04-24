@@ -2,9 +2,10 @@
 body {
   background-color: rgb(247, 255, 130);
 }
+
 h1 {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: #4f54f8; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #4f54f8;
   text-shadow: -1.5px -1.5px 0 #333;
   text-align: center;
 }
@@ -15,12 +16,14 @@ h1 {
   border: 2px solid #333;
   padding: 10px;
   margin: 10px;
-  color: #4f54f8; 
+  color: #4f54f8;
   text-shadow: -1.5px -1.5px 0 #333;
   border-radius: 5px;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 50px; /* Fixed height for buttons */
+  width: 200px; /* Fixed width for buttons */
 }
 
 .pokemon-button:hover {
@@ -54,9 +57,11 @@ h1 {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
+
 ul {
   list-style: none;
 }
+
 .close {
   color: #aaa;
   float: right;
@@ -70,7 +75,8 @@ ul {
   text-decoration: none;
   cursor: pointer; /* Change cursor to pointer on hover */
 }
-.pokemon-list{
+
+.pokemon-list {
   flex-wrap: wrap;
   justify-content: space-between;
   /* Distribute items evenly */
@@ -84,6 +90,7 @@ ul {
   margin-bottom: 20px;
   /* Add bottom margin for spacing */
 }
+
 .modal-image {
   width: 100px;
   /* Adjust as needed */
