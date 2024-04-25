@@ -75,15 +75,25 @@ let pokemonRepository = (function () {
   // Function to show Pokémon details in the modal
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function (itemWithDetails) {
-      const modalName = document.getElementById('pokemonName');
-      const modalHeight = document.getElementById('pokemonHeight');
-      const modalImage = document.getElementById('pokemonImage');
+      const modalName = document.querySelector('.modal-name');
+      const modalHeight = document.querySelector('.modal-height');
+      const modalImage = document.querySelector('.modal-image');
 
       modalName.textContent = itemWithDetails.name;
       modalHeight.textContent = itemWithDetails.height + ' decimetres';
       modalImage.src = itemWithDetails.imageUrl;
 
-      document.getElementById('pokemonModal').classList.add('show');
+      $('#pokemonModal').modal('show');
+
+      // Add event listener to close the modal when the "x" button is clicked
+      document.querySelector('.close').addEventListener('click', function () {
+        $('#pokemonModal').modal('hide');
+      });
+
+      // Add event listener to close the modal when the background is clicked
+      document.querySelector('.modal-backdrop').addEventListener('click', function () {
+        $('#pokemonModal').modal('hide');
+      });
     });
   }
 

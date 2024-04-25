@@ -58,7 +58,7 @@ h1 {
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
-ul {
+.list-group {
   list-style: none;
 }
 
@@ -76,7 +76,7 @@ ul {
   cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-.pokemon-list {
+.list-group {
   flex-wrap: wrap;
   justify-content: space-between;
   /* Distribute items evenly */
@@ -84,7 +84,7 @@ ul {
   /* Remove default padding */
 }
 
-.list-group-item {
+.list-group {
   flex-basis: calc(33.33% - 20px);
   /* Adjust the width of each item */
   margin-bottom: 20px;
