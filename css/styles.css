@@ -9,16 +9,18 @@ h1 {
   text-shadow: -1.5px -1.5px 0 #333;
   text-align: center;
 }
-.jumbotron jumbotron-fluid{
+#jumbotron {
   background-color: rgb(250, 128, 128);
+}
+.text-center {
+  background-color: rgb(250, 128, 128); 
 }
 
 /* Button styles */
 .pokemon-button {
   background-color: rgb(250, 94, 94);
   margin: 10px;
-  color: #4f54f8;
-  text-shadow: -1.5px -1.5px 0 #333;
+  color: #333;
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
@@ -42,7 +44,6 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
-
 /* Modal styles */
 .modal {
   display: none; /* Hidden by default */
@@ -53,7 +54,10 @@ h1 {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scrolling if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Override Bootstrap modal backdrop */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0); /* Make the backdrop transparent */
 }
 
 .modal-content {
