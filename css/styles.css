@@ -9,12 +9,13 @@ h1 {
   text-shadow: -1.5px -1.5px 0 #333;
   text-align: center;
 }
+.jumbotron jumbotron-fluid{
+  background-color: rgb(250, 128, 128);
+}
 
 /* Button styles */
 .pokemon-button {
   background-color: rgb(250, 94, 94);
-  border: 2px solid #333;
-  padding: 10px;
   margin: 10px;
   color: #4f54f8;
   text-shadow: -1.5px -1.5px 0 #333;
@@ -24,6 +25,10 @@ h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 50px; /* Fixed height for buttons */
   width: 200px; /* Fixed width for buttons */
+}
+#search-button {
+  background-color: rgb(250, 94, 94);
+  color: black
 }
 
 .pokemon-button:hover {
@@ -54,8 +59,6 @@ h1 {
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
@@ -65,7 +68,6 @@ h1 {
 
 .close {
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
 }

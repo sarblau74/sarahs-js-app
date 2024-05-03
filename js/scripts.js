@@ -97,6 +97,33 @@ let pokemonRepository = (function () {
     });
   }
 
+  // Function to filter Pokémon based on the search query
+  function filterPokemon(searchQuery) {
+    const filteredPokemon = pokemonList.filter(pokemon => {
+      return pokemon.name.toLowerCase().includes(searchQuery.toLowerCase());
+    });
+
+    // Clear existing list items
+    let pokemonListElement = document.querySelector('.pokemon-list');
+    pokemonListElement.innerHTML = '';
+
+    // Add filtered Pokémon to the list
+    if (filteredPokemon.length === 0) {
+      document.getElementById('no-results').style.display = 'block';
+    } else {
+      document.getElementById('no-results').style.display = 'none';
+      filteredPokemon.forEach(pokemon => {
+        addListItem(pokemon);
+      });
+    }
+  }
+
+  // Event listener for search bar input
+  document.getElementById('search-bar').addEventListener('input', function () {
+    const searchQuery = this.value.trim();
+    filterPokemon(searchQuery);
+  });
+
   // Return public functions
   return {
     add: add,
