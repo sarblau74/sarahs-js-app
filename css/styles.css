@@ -28,13 +28,10 @@ h1 {
   height: 50px; /* Fixed height for buttons */
   width: 200px; /* Fixed width for buttons */
 }
-#search-button {
-  background-color: rgb(250, 94, 94);
-  color: black
-}
 
 .pokemon-button:hover {
   background-color: beige;
+  color:#333;
   transform: scale(1.1);
 }
 
@@ -74,6 +71,7 @@ h1 {
   color: #aaa;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover,
